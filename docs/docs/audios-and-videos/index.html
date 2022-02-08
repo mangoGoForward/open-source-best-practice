@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="我们可以通过很多渠道来了解到开源相关的知识、见解、故事等等，其中音视频是一个非常生动的来源：
+   来源 类型 描述      开源面对面 播客 由个人发起的系列访谈节目    ALC Beijing Podcast 播客     开源之道Talking 播客     OpenTEKr 视频 致力于构建一个可持续发展的开放科技生态圈    Koala聊开源 视频 个人观点分享    大咖说开源 视频 开源软件供应链点亮计划    其他 #     类型 标题     视频  开源的魅力 - 以 Apache APISIX 为例   播客  和吴晟聊开源 - 工程师是不是/该不该/能不能/有没有赚到盆满钵满？    ">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="我们可以通过很多渠道来了解到开源相关的知识、见解、故事等等，其中音视频是一个非常生动的来源：
+   来源 类型 描述      开源面对面 播客 由个人发起的系列访谈节目    ALC Beijing Podcast 播客     开源之道Talking 播客     OpenTEKr 视频 致力于构建一个可持续发展的开放科技生态圈    Koala聊开源 视频 个人观点分享    大咖说开源 视频 开源软件供应链点亮计划    其他 #     类型 标题     视频  开源的魅力 - 以 Apache APISIX 为例   播客  和吴晟聊开源 - 工程师是不是/该不该/能不能/有没有赚到盆满钵满？    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://linuxsuren.github.io/open-source-best-practice/docs/audios-and-videos/" /><meta property="article:section" content="docs" />
+
+<meta property="og:site_name" content="开源最佳实践" />
+
+<title>Audios and Videos | 开源最佳实践</title>
+<link rel="manifest" href="/open-source-best-practice/manifest.json">
+<link rel="icon" href="/open-source-best-practice/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/open-source-best-practice/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/open-source-best-practice/flexsearch.min.js"></script>
+  <script defer src="/open-source-best-practice/en.search.min.b29c86f9d157a9aece1ecbfe14caebab1fb20a66c6c839382d8d681fa1b294ff.js" integrity="sha256-spyG&#43;dFXqa7OHsv&#43;FMrrqx&#43;yCmbGyDk4LY1oH6GylP8=" crossorigin="anonymous"></script>
+
+  <script defer src="/open-source-best-practice/sw.min.1fcacdc9eaa4bdd806982ca0676e22220d8c5da674a57a298e4cde7351008484.js" integrity="sha256-H8rNyeqkvdgGmCygZ24iIg2MXaZ0pXopjkzec1EAhIQ=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-75011109-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/open-source-best-practice/"><span>开源最佳实践</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li>
+  <a href="/open-source-best-practice/docs/good-first-issue/">good-first-issue</a></li>
+<li>
+  <a href="/open-source-best-practice/docs/motivation/">为什么要参与开源</a></li>
+<li>
+  <a href="/open-source-best-practice/docs/encourage/">激励制度</a></li>
+<li>
+  <a href="/open-source-best-practice/docs/books/">图书推荐</a></li>
+</ul>
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/LinuxSuRen/open-source-best-practice" target="_blank" rel="noopener">
+        GitHub
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/open-source-best-practice/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Audios and Videos</strong>
+
+  <label for="toc-control">
+    
+    <img src="/open-source-best-practice/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>我们可以通过很多渠道来了解到开源相关的知识、见解、故事等等，其中音视频是一个非常生动的来源：</p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <a href="https://github.com/opensource-f2f/episode/">开源面对面</a></td>
+<td>播客</td>
+<td>由个人发起的系列访谈节目</td>
+</tr>
+<tr>
+<td>
+  <a href="https://www.ximalaya.com/keji/37853515/">ALC Beijing Podcast</a></td>
+<td>播客</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <a href="https://www.ximalaya.com/album/32915040">开源之道Talking</a></td>
+<td>播客</td>
+<td></td>
+</tr>
+<tr>
+<td>
+  <a href="https://space.bilibili.com/1177021647">OpenTEKr</a></td>
+<td>视频</td>
+<td>致力于构建一个可持续发展的开放科技生态圈</td>
+</tr>
+<tr>
+<td>
+  <a href="https://space.bilibili.com/489667127/">Koala聊开源</a></td>
+<td>视频</td>
+<td>个人观点分享</td>
+</tr>
+<tr>
+<td>
+  <a href="https://space.bilibili.com/578074510/channel/seriesdetail?sid=694280">大咖说开源</a></td>
+<td>视频</td>
+<td>开源软件供应链点亮计划</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其他">
+  其他
+  <a class="anchor" href="#%e5%85%b6%e4%bb%96">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>视频</td>
+<td>
+  <a href="https://www.youtube.com/watch?v=A_geiZHnvv8">开源的魅力 - 以 Apache APISIX 为例</a></td>
+</tr>
+<tr>
+<td>播客</td>
+<td>
+  <a href="https://www.xiaoyuzhoufm.com/episode/61eabab94675a08411f514b9">和吴晟聊开源 - 工程师是不是/该不该/能不能/有没有赚到盆满钵满？</a></td>
+</tr>
+</tbody>
+</table>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "my-site" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
